@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     // 重定向到 /component 路由
     path:"",
-    redirectTo:"/component",
+    redirectTo:"component",
     pathMatch:"full"
   },
   {

@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from "../../../service/config/config.service"
-
+import { ConfigService } from "../../../service/config/config.service";
+export interface Config{
+  heroesUrl: string;
+  textfile: string;
+}
 @Component({
   selector: 'app-config',
   templateUrl: './config.component.html',
   styleUrls: ['./config.component.less']
 })
 
-export interface Config{
-  heroesUrl: string;
-  textfile: string;
-}
+
 export class ConfigComponent implements OnInit {
 
   config={};

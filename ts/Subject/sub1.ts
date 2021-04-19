@@ -26,20 +26,20 @@ function console_num():void{
 }
 // f2() Subject() 多播
 // 当Subject作为可观察对象时
-function f2(){
-    const subject = new Subject();
-    const observer1 = {
-        next:(num:number) => console_num(),
-        complete:()=>console_num()
-    }
+// function f2(){
+//     const subject = new Subject();
+//     const observer1 = {
+//         next:(num:number) => console_num(),
+//         complete:()=>console_num()
+//     }
 
-    const observer2 = {
-        next:(num:number) => console.log("observer2.."+num)
-    }
+//     const observer2 = {
+//         next:(num:number) => console.log("observer2.."+num)
+//     }
 
-    subject.subscribe(observer1);
+//     subject.subscribe(observer1);
 
 
-}
+// }
 
 f1()
