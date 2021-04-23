@@ -15,7 +15,7 @@ import { ChangedetectorrefComponent } from './com-ref/changedetectorref/changede
   ],
   imports: [
     CommonModule,
-    ComRoutingModule
+    ComRoutingModule,
   ]
 })
 export class ComModule { }

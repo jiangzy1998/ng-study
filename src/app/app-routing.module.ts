@@ -12,6 +12,10 @@ const routes: Routes = [
     // 指向组件总路由，懒加载
     path:"component",
     loadChildren: ()=>import('./com/com-routing.module').then(m=>m.ComRoutingModule)
+  }, 
+  {
+    path:"practice",
+    loadChildren:()=>import('./practice/practice.module').then(m=>m.PracticeModule)
   }
   
 ];
