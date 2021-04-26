@@ -37,7 +37,8 @@
         </div>
        
     </div>
-    <ng-container *ngFor="let location of taggingLoc;let i=index;">
+    <!-- ng-container 无法使用未解决 -->
+    <!-- <ng-container *ngFor="let location of taggingLoc;let i=index;">
         <div style="position:absolute; z-index: 1;width: 100%; height: 100%;">
             <div style=" width: 324px;height: 324px;margin: 0 auto; border:1px solid transparent;">
                 <div [style.margin-left.px]="taggingLoc[0]" [style.margin-top.px]="taggingLoc[1]" style="width: 50px;height: 50px;">
@@ -48,9 +49,17 @@
             </div>
         </div>
     </ng-container>
-    
-
-    <!-- <div style="position:absolute; z-index: 1;width: 100%; height: 100%;">
+     -->
+     <div style="position:absolute; z-index: 1;width: 100%; height: 100%;">
+        <div style=" width: 324px;height: 324px;margin: 0 auto; border:1px solid transparent;">
+            <div [style.margin-left.px]="taggingLoc[0]" [style.margin-top.px]="taggingLoc[1]" style="width: 50px;height: 50px;">
+                <a>17%</a>
+                <br>
+                <a>D500</a>
+            </div>
+        </div>
+    </div>
+    <div style="position:absolute; z-index: 1;width: 100%; height: 100%;">
         <div style=" width: 324px;height: 324px;margin: 0 auto;border:1px solid transparent;">
             <div [style.margin-left.px]="taggingLoc[2]" [style.margin-top.px]="taggingLoc[3]" style="width: 50px;height: 50px;">
                 <a>17%</a>
@@ -99,7 +108,7 @@
                 <a>D500</a>
             </div>
         </div>
-    </div> -->
+    </div>
 
 </div>
 

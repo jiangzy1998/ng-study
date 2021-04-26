@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #aa{
+            display: block;
+            font-size: 40px;
+            margin: 500px;
+            width: 130px;
+        }
+        #bb{
+            display: none;
+            position: absolute;
+        }
+
+        #name{
+            font-size: 16px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #000000;
+            line-height: 25px;
+        }
+
+
+
+    </style>
+    
+</head>
+<body>
+    <a id="aa" href="#">1</a>
+
+    <div id="bb">
+        <div style="position: relative; width: 410px; height: 40px;">
+            <div style="position: absolute; z-index: 2;">
+                <canvas id="myCanvas" width="400" height="30">
+
+                </canvas>
+            </div>
+            <div style="position: absolute;left: 1px;height: 1px; z-index: 1;" >
+                <img src="../../../../assets/img/Icon／定位.png">
+                <a id="name">盐城市01集控点</a>
+                <br>
+                <a id="name">集控点：正常状态</a>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+    <script>
+        var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+        var grd=ctx.createLinearGradient(0,0,400,25);
+        grd.addColorStop(1,"red");
+        grd.addColorStop(0,"white");
+        ctx.strokeStyle=grd;
+
+        ctx.moveTo(400,0);
+        ctx.lineTo(200,0);
+        ctx.lineTo(180,25);
+        ctx.lineTo(0,25);
+        ctx.stroke();
+        var aAs = document.getElementById("aa");
+        var oMsg = document.getElementById("bb");
+        aAs.onmouseover = function(){
+            oMsg.style.display = "block"; 
+        }
+        aAs.onmouseout = function(){
+            oMsg.style.display = "none"; 
+        }
+        aAs.onmousemove = function(ev){
+
+            var e = ev || window.event;
+    
+            oMsg.style.left = e.clientX - 400 + "px";
+            oMsg.style.top = e.clientY + 5 + "px";
+
+        }
+        
+    </script>
+</body>
+</html>

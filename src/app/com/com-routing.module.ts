@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EchartComponent } from './com-echart/echart/echart.component';
 import { ComObservableComponent } from "./com-observable/com-observable.component"
 import { ChangedetectorrefComponent } from './com-ref/changedetectorref/changedetectorref.component';
 import { SvgComponent } from './com-svg/svg/svg.component';
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path:"svg",
     component:SvgComponent
+  },
+  {
+    path:"echart",
+    component:EchartComponent
   }
 ];
 
